@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "c6d72f03-c74f-4101-a5e3-34863f12f85f",
+		"name": "datacenter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45198418",
+		"_collection_link": "https://igor-4366907.postman.co/workspace/Igor's-Workspace~53e140f9-9d79-40a9-8703-5a1ad326f758/collection/45198418-c6d72f03-c74f-4101-a5e3-34863f12f85f?action=share&source=collection_link&creator=45198418"
+	},
+	"item": [
+		{
+			"name": "devices",
+			"item": [
+				{
+					"name": "Create device",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Device 1\",\n    \"description\": \"Device 1 description\",\n    \"serial_number\": \"AK47\",\n    \"units\": 1,\n    \"power\": 1,\n    \"rack_id\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/devices",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all devices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/devices",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get device",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/devices/{{deviceId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"devices",
+								"{{deviceId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update device",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated device 1\",\n    \"description\": \"Updated device 1 description\",\n    \"serial_number\": \"IM33\",\n    \"units\": 11,\n    \"power\": 11,\n    \"rack_id\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/devices/{{deviceId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"devices",
+								"{{deviceId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete device",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/devices/{{deviceId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"devices",
+								"{{deviceId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "racks",
+			"item": [
+				{
+					"name": "Create rack",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Rack 1\",\n    \"description\": \"Rack 1 description\",\n    \"serial_number\": \"TWE12\",\n    \"capacity_units\": 10,\n    \"max_power\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/racks",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"racks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all racks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/racks",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"racks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get rack",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/racks/{{rackId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"racks",
+								"{{rackId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update rack",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n    \"name\": \"Updated rack 1\",\n    \"description\": \"Updated rack 1 description\",\n    \"serial_number\": \"AUR12\",\n    \"capacity_units\": 100,\n    \"max_power\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/racks/{{rackId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"racks",
+								"{{rackId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete rack",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/racks/{{rackId}}",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"racks",
+								"{{rackId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "allocation",
+			"item": [
+				{
+					"name": "Allocation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/allocate",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"allocate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8000"
+		},
+		{
+			"key": "deviceId",
+			"value": "1"
+		},
+		{
+			"key": "rackId",
+			"value": "1"
+		}
+	]
+}
