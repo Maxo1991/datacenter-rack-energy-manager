@@ -36,3 +36,9 @@ You can import it into Postman by following these steps:
 2. Go to **File → Import**  
 3. Select the file: `postman/DataCenterAPI.postman_collection.json`  
 4. The collection will appear in your Postman workspace
+
+## Documentation
+
+Detailed functional documentation about how devices and racks are managed,
+as well as the allocation logic, can be found in [DOCUMENTATION.md](DOCUMENTATION.md).
+
